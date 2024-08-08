@@ -48,6 +48,7 @@
                 <ul class="child-nav">
                     <li><a href="add-result.php"><i class="fa fa-plus"></i> <span>Agregar Resultado</span></a></li>
                     <li><a href="manage-results.php"><i class="fa fa-bars"></i> <span>Gestionar Resultados</span></a></li>
+                    <li><a href="view-results.php"><i class="fa fa-bars"></i> <span>Ver Resultados</span></a></li>
 
                 </ul>
             </li>
