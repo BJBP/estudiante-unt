@@ -111,7 +111,7 @@ if (strlen($_SESSION['alogin']) == "") {
 
                                             <div class="form-group col-md-6">
                                                 <label for="default" class="control-label">ID Rol</label>
-                                                <input type="text" name="rollid" class="form-control" id="rollid" maxlength="5" required="required" autocomplete="off">
+                                                <input type="text" name="rollid" class="form-control" id="rollid" maxlength="8" required="required" autocomplete="off">
 
                                             </div>
 
@@ -125,7 +125,7 @@ if (strlen($_SESSION['alogin']) == "") {
 
                                             <div class="form-group col-md-6">
                                                 <label for="default" class="control-label">Género</label>
-                                                <input type="radio" name="gender" value="Male" required="required" checked=""> Male <input type="radio" name="gender" value="Female" required="required"> Female <input type="radio" name="gender" value="Other" required="required"> Other
+                                                <input type="radio" name="gender" value="Male" required="required" checked=""> Male <input type="radio" name="gender" value="Female" required="required"> Female
 
                                             </div>
 

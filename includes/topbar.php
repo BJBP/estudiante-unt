@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ConfiguroWeb | Dashboard</title>
+    <title>TopBD | Dashboard</title>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" media="screen">
@@ -51,9 +51,10 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="navbar-header no-padding">
-                        <a class="navbar-brand" target="a_blank" href="https://www.configuroweb.com/46-aplicaciones-gratuitas-en-php-python-y-javascript/#Aplicaciones-gratuitas-en-PHP,-Python-y-Javascript">
-                            <img src="assets/images/logo.png" style="Width: 165px">
-                        </a>
+                        <!-- <a class="navbar-brand" target="a_blank" href="https://www.configuroweb.com/46-aplicaciones-gratuitas-en-php-python-y-javascript/#Aplicaciones-gratuitas-en-PHP,-Python-y-Javascript">
+                            
+                        </a> -->
+                        <img src="assets/images/logo.png" style="Width: 165px">
                         <span class="small-nav-handle hidden-sm hidden-xs"><i class="fa fa-outdent"></i></span>
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
