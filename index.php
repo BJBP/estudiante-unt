@@ -338,112 +338,25 @@ include('includes/config.php');
   </div>
   <!-- Contact End -->
 
-
   <!-- Footer Start -->
-
-  </div>
-
-  <!-- ========== COMMON JS FILES ========== -->
-  <script src="assets/js/jquery/jquery-2.2.4.min.js"></script>
-  <script src="assets/js/jquery/jquery-2.2.4.init.js"></script>
-  <script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
-  <script src="assets/js/bootstrap/bootstrap.min.js"></script>
-  <script src="assets/js/pace/pace.min.js"></script>
-  <script src="assets/js/lobipanel/lobipanel.min.js"></script>
-  <script src="assets/js/iscroll/iscroll.js"></script>
-  <script src="assets/js/DataTables/datatables.min.js"></script>
-  <!-- ========== PAGE JS FILES ========== -->
-  <script src="assets/js/prism/prism.js"></script>
-  <script src="assets/js/waypoint/waypoints.min.js"></script>
-  <script src="assets/js/counterUp/jquery.counterup.min.js"></script>
-  <script src="assets/js/amcharts/amcharts.js"></script>
-  <script src="assets/js/amcharts/serial.js"></script>
-  <script src="assets/js/amcharts/plugins/export/export.min.js"></script>
-  <link rel="stylesheet" href="assets/js/amcharts/plugins/export/export.css" type="text/css" media="all" />
-  <script src="assets/js/amcharts/themes/light.js"></script>
-  <!-- <script src="assets/js/toastr/toastr.min.js"></script> -->
-  <script src="assets/js/icheck/icheck.min.js"></script>
-
-  <!-- ========== THEME JS ========== -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/production-chart.js"></script>
-  <script src="assets/js/traffic-chart.js"></script>
-  <script src="assets/js/task-list.js"></script>
+  <?php include('includes/footer.php'); ?>
+  <!-- Footer End -->
 
 
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-
-  <style>
-    .goog-logo-link {
-      display: none;
-    }
-
-    .goog-te-gadget {
-      color: transparent;
-    }
-
-    .goog-te-gadget .goog-te-combo {
-      margin: 0px 0;
-      padding: 8px;
-      color: #000;
-    }
-
-    #google_translate_element {
-      padding-top: 11px;
-      color: #000;
-      position: absolute;
-      right: 20px;
-    }
-  </style>
-
-</body>
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    .footer {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      background-color: #3d85ed;
-      color: white;
-      text-align: center;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="footer">
-    <p> <a style="color:white; font-size:large;">Estudiantes UNT</a></p>
-  </div>
-
-</body>
-
-
-</html>
-<!-- Footer End -->
-
-
-<!-- Back to Top -->
-<a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/waypoints/waypoints.min.js"></script>
-<script src="lib/counterup/counterup.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-<!-- Template Javascript -->
-<script src="./assets/js/main.js"></script>
+  <!-- Template Javascript -->
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

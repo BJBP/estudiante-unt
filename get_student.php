@@ -30,7 +30,7 @@ if (!empty($_POST["classid"])) {
                                                   $stmt->execute(array(':cid' => $cid1, ':stts' => $status));
 
                                                   while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
-      <p> <?php echo htmlentities($row['SubjectName']); ?><input type="text" name="marks[]" value="" class="form-control" required="" placeholder="Introducir puntos sobre 100" autocomplete="off"></p>
+      <p> <?php echo htmlentities($row['SubjectName']); ?><input type="text" name="marks[]" value="" class="form-control" required="" placeholder="Introducir puntos sobre 20" autocomplete="off"></p>
 
 <?php  }
                                                 }

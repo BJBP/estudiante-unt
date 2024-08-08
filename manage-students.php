@@ -44,7 +44,34 @@ if (strlen($_SESSION['alogin']) == "") {
                 <section class="section">
                     <div class="container-fluid">
 
-
+                        <!-- Formulario de filtro -->
+                        <form method="post" action="">
+                            <div class="form-group">
+                                <label for="class">Año</label>
+                                <select name="class" class="form-control" id="class" required>
+                                    <option value="">Seleccionar Año</option>
+                                    <?php
+                                    $sql = "SELECT id, ClassName FROM tblclasses";
+                                    $query = $dbh->prepare($sql);
+                                    $query->execute();
+                                    $classes = $query->fetchAll(PDO::FETCH_OBJ);
+                                    foreach ($classes as $class) {
+                                        echo "<option value='" . $class->id . "'>" . $class->ClassName . "</option>";
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="section">Sección</label>
+                                <select name="section" class="form-control" id="section" required>
+                                    <option value="">Seleccionar Sección</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <!-- Añadir más secciones según sea necesario -->
+                                </select>
+                            </div>
+                            <button type="submit" name="filter" class="btn btn-primary">Filtrar</button>
+                        </form>
 
                         <div class="row">
                             <div class="col-md-12">
@@ -78,8 +105,23 @@ if (strlen($_SESSION['alogin']) == "") {
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <?php $sql = "SELECT tblstudents.StudentName,tblstudents.RollId,tblstudents.RegDate,tblstudents.StudentId,tblstudents.Status,tblclasses.ClassName,tblclasses.Section from tblstudents join tblclasses on tblclasses.id=tblstudents.ClassId";
-                                                $query = $dbh->prepare($sql);
+                                                <?php
+                                                if (isset($_POST['filter'])) {
+                                                    $classid = $_POST['class'];
+                                                    $section = $_POST['section'];
+                                                    $sql = "SELECT tblstudents.StudentName,tblstudents.RollId,tblstudents.RegDate,tblstudents.StudentId,tblstudents.Status,tblclasses.ClassName,tblclasses.Section 
+                                                            FROM tblstudents 
+                                                            JOIN tblclasses ON tblclasses.id=tblstudents.ClassId 
+                                                            WHERE tblstudents.ClassId=:classid AND tblclasses.Section=:section";
+                                                    $query = $dbh->prepare($sql);
+                                                    $query->bindParam(':classid', $classid, PDO::PARAM_STR);
+                                                    $query->bindParam(':section', $section, PDO::PARAM_STR);
+                                                } else {
+                                                    $sql = "SELECT tblstudents.StudentName,tblstudents.RollId,tblstudents.RegDate,tblstudents.StudentId,tblstudents.Status,tblclasses.ClassName,tblclasses.Section 
+                                                            FROM tblstudents 
+                                                            JOIN tblclasses ON tblclasses.id=tblstudents.ClassId";
+                                                    $query = $dbh->prepare($sql);
+                                                }
                                                 $query->execute();
                                                 $results = $query->fetchAll(PDO::FETCH_OBJ);
                                                 $cnt = 1;
@@ -105,8 +147,6 @@ if (strlen($_SESSION['alogin']) == "") {
                                                 <?php $cnt = $cnt + 1;
                                                     }
                                                 } ?>
-
-
                                             </tbody>
                                         </table>
 
@@ -144,8 +184,4 @@ if (strlen($_SESSION['alogin']) == "") {
     </div>
     <!-- /.content-wrapper -->
     <?php include('includes/footer.php'); ?>
-
-
-
-
 <?php } ?>
